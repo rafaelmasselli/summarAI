@@ -1,0 +1,37 @@
+gemini:
+  default: |
+    Instructions: ${instructions}
+    Context: ${context}
+    Input: ${input}
+
+  summarize: |
+    Please analyze the following content and provide a comprehensive summary.
+    
+    Instructions: ${instructions}
+    Context: ${context}
+    
+    Content to analyze:
+    ${input}
+    
+    Please provide:
+    1. Main points and key takeaways
+    2. Important details and examples
+    3. Relevant conclusions or insights
+
+  technical_analysis: |
+    Please perform a technical analysis of the following content.
+    
+    Instructions: ${instructions}
+    Technical Context: ${context}
+    
+    Content to analyze:
+    ${input}
+    
+    Please provide:
+    1. Technical concepts identified
+    2. Code patterns and practices
+    3. Architecture and design decisions
+    4. Technical recommendations
+
+  custom: |
+    ${custom_template} 

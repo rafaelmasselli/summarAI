@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/config.py
+src/main.py
+src/llm_estudy.egg-info/PKG-INFO
+src/llm_estudy.egg-info/SOURCES.txt
+src/llm_estudy.egg-info/dependency_links.txt
+src/llm_estudy.egg-info/top_level.txt
+src/models/__init__.py
+src/models/video.py
+src/services/__init__.py
+src/services/summarizer.py
+src/services/translator.py
+src/services/youtube.py
+src/utils/__init__.py
+src/utils/youtube.py
