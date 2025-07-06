@@ -3,42 +3,48 @@ import os
 
 from fpdf import FPDF
 
+from util.logger import logger
+
 
 class PdfService:
     def __init__(self):
         self.path = os.path.join(os.path.dirname(__file__), "..", "..", "..", "pdfs")
-        # Create directory if it doesn't exist
         os.makedirs(self.path, exist_ok=True)
+        logger.debug(f"PDF output directory: {self.path}")
 
     def create_pdf(self, text: str) -> str:
-        pdf = FPDF()
-        pdf.add_page()
+        logger.info("Creating PDF document...")
 
-        # Add title
-        pdf.set_font("Arial", "B", size=16)
-        pdf.cell(200, 10, "Video Summary", ln=1, align="C")
+        try:
+            pdf = FPDF()
+            pdf.add_page()
+            logger.debug("PDF page added")
 
-        # Add timestamp
-        pdf.set_font("Arial", "I", size=10)
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        pdf.cell(200, 10, f"Generated on: {timestamp}", ln=1, align="R")
+            pdf.set_font("Arial", "B", size=16)
+            pdf.cell(200, 10, "Video Summary", ln=1, align="C")
 
-        # Add content
-        pdf.set_font("Arial", size=12)
+            pdf.set_font("Arial", "I", size=10)
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            pdf.cell(200, 10, f"Generated on: {timestamp}", ln=1, align="R")
 
-        # Handle multi-line text by adding each paragraph
-        pdf.ln(10)
+            logger.debug("PDF header added")
 
-        # Split text into paragraphs and add them to the PDF
-        paragraphs = text.split("\n")
-        for paragraph in paragraphs:
-            # Handle long paragraphs by wrapping text
-            pdf.multi_cell(0, 10, paragraph)
-            pdf.ln(5)
+            pdf.set_font("Arial", size=12)
+            pdf.ln(10)
 
-        # Save the PDF
-        output_path = os.path.join(self.path, "summary.pdf")
-        pdf.output(output_path)
+            paragraphs = text.split("\n")
+            logger.debug(f"Processing {len(paragraphs)} paragraphs")
 
-        print(f"PDF created successfully at: {output_path}")
-        return output_path
+            for paragraph in paragraphs:
+                pdf.multi_cell(0, 10, paragraph)
+                pdf.ln(5)
+
+            output_path = os.path.join(self.path, "summary.pdf")
+            pdf.output(output_path)
+
+            logger.success(f"PDF created successfully at: {output_path}")
+            return output_path
+
+        except Exception as e:
+            logger.error(f"Failed to create PDF: {str(e)}")
+            raise
