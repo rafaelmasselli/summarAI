@@ -11,20 +11,20 @@ def summarize_video():
     youtube_handler = YoutubeService(link)
     text = youtube_handler.summarize_video()
     logger.success("Video summarization completed")
-    return text
+    return text, link
 
 
 def main() -> None:
     try:
-        logger.debug("Initializing application")
+        logger.info("Initializing application")
         load_dotenv()
-        logger.debug("Environment variables loaded")
+        logger.info("Environment variables loaded")
 
-        text = summarize_video()
+        text, video_url = summarize_video()
 
         logger.info("Creating PDF document")
         pdf_service = PdfService()
-        pdf_path = pdf_service.create_pdf(text)
+        pdf_path = pdf_service.create_pdf(text, video_url)
         logger.success(f"PDF created successfully at: {pdf_path}")
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}")
