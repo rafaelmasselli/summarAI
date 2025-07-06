@@ -18,6 +18,7 @@ class ModelConfig:
 
     def to_dict(self) -> Dict[str, Any]:
         config = {
+            "model_name": self.model_name,
             "temperature": self.temperature,
             "top_p": self.top_p,
             "prompt_template": self.prompt_template,

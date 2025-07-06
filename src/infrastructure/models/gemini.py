@@ -1,5 +1,6 @@
 from typing import Any, Dict, Optional
 
+from langchain.schema.messages import HumanMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 from domain.interfaces.model import Model
@@ -16,8 +17,20 @@ class GeminiModel(Model):
     def generate_text(
         self, prompt: str, context: Optional[Dict[str, Any]] = None
     ) -> str:
-        full_prompt = self._format_prompt_with_memory(prompt)
-        return self.model.invoke(full_prompt, context or {})
+        system_prompt = self.config.prompt_template
+
+        messages = [SystemMessage(content=system_prompt), HumanMessage(content=prompt)]
+
+        memory_context = self._get_memory_context()
+        if memory_context:
+            messages = [
+                SystemMessage(content=system_prompt),
+                HumanMessage(
+                    content=f"{prompt}\n\nPrevious history:\n{memory_context}"
+                ),
+            ]
+
+        return self.model.invoke(messages, context or {})
 
     def get_model_info(self) -> Dict[str, Any]:
         return {

@@ -1,11 +1,11 @@
 """
-Serviços da Aplicação
+Application Services
 
-Este módulo contém os serviços que implementam a lógica de negócio:
+This module contains services that implement business logic:
 
 Classes:
-- YoutubeService: Serviço para extração e processamento de vídeos do YouTube
+- YoutubeService: Service for extracting and processing YouTube videos
 
-Os serviços implementam a lógica de negócio específica da aplicação,
-utilizando as interfaces e implementações das outras camadas do sistema.
+The services implement the application-specific business logic,
+using interfaces and implementations from other layers of the system.
 """

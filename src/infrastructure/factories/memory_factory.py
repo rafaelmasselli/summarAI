@@ -17,7 +17,7 @@ class MemoryFactory:
         cls, memory_type: str, memory_key: str = "chat_history", k: Optional[int] = None
     ) -> Memory:
         if memory_type not in cls._memories:
-            raise ValueError(f"Tipo de memória não suportado: {memory_type}")
+            raise ValueError(f"Unsupported memory type: {memory_type}")
 
         memory_class = cls._memories[memory_type]
 

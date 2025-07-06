@@ -25,7 +25,7 @@ class Model(ABC):
     def _format_prompt_with_memory(self, prompt: str) -> str:
         memory_context = self._get_memory_context()
         if memory_context:
-            return f"{prompt}\n\nHistórico anterior:\n{memory_context}".strip()
+            return f"{prompt}\n\nPrevious history:\n{memory_context}".strip()
         return prompt
 
     @abstractmethod

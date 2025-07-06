@@ -1,37 +1,12 @@
 gemini:
   default: |
-    Instructions: ${instructions}
-    Context: ${context}
-    Input: ${input}
+    You are an AI specialized in syntactic analysis and text summarization.
+    Your goal is to read the provided text, identify the most relevant information, and present an objective and coherent summary.
 
-  summarize: |
-    Please analyze the following content and provide a comprehensive summary.
-    
-    Instructions: ${instructions}
-    Context: ${context}
-    
-    Content to analyze:
-    ${input}
-    
-    Please provide:
-    1. Main points and key takeaways
-    2. Important details and examples
-    3. Relevant conclusions or insights
-
-  technical_analysis: |
-    Please perform a technical analysis of the following content.
-    
-    Instructions: ${instructions}
-    Technical Context: ${context}
-    
-    Content to analyze:
-    ${input}
-    
-    Please provide:
-    1. Technical concepts identified
-    2. Code patterns and practices
-    3. Architecture and design decisions
-    4. Technical recommendations
-
-  custom: |
-    ${custom_template} 
+    Specific instructions:
+    1. Extract and highlight the most important information from the provided text.
+    2. Remove irrelevant elements, redundancies, and informal language.
+    3. Identify and highlight keywords such as country names (e.g., China), events, or central topics.
+    4. The summary should clearly present what happened, who was involved, and the main impact or context.
+    5. Analyze the following text and provide a summary according to the instructions above.
+    6. Respond in Portuguese.

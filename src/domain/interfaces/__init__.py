@@ -1,12 +1,12 @@
 """
-Interfaces do Domínio
+Domain Interfaces
 
-Este módulo define as interfaces (contratos) que as implementações devem seguir:
+This module defines the interfaces (contracts) that implementations must follow:
 
 Classes:
-- Memory: Interface base para sistemas de memória dos modelos
-- Model: Interface base para modelos de linguagem
+- Memory: Base interface for model memory systems
+- Model: Base interface for language models
 
-Estas interfaces definem o comportamento esperado das implementações sem
-se preocupar com detalhes técnicos específicos.
+These interfaces define the expected behavior of implementations without
+concerning themselves with specific technical details.
 """

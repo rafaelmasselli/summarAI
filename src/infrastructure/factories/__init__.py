@@ -1,12 +1,12 @@
 """
-Fábricas de Objetos
+Object Factories
 
-Este módulo contém as fábricas responsáveis por criar instâncias concretas:
+This module contains factories responsible for creating concrete instances:
 
 Classes:
-- ModelFactory: Fábrica para criar instâncias de modelos de linguagem
-- MemoryFactory: Fábrica para criar instâncias de sistemas de memória
+- ModelFactory: Factory for creating language model instances
+- MemoryFactory: Factory for creating memory system instances
 
-As fábricas encapsulam a lógica de criação de objetos, permitindo
-flexibilidade na escolha de implementações concretas em tempo de execução.
+The factories encapsulate object creation logic, allowing
+flexibility in choosing concrete implementations at runtime.
 """

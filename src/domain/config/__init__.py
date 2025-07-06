@@ -1,11 +1,11 @@
 """
-Configurações do Domínio
+Domain Configurations
 
-Este módulo contém as classes de configuração e modelos de dados do domínio:
+This module contains domain configuration classes and data models:
 
 Classes:
-- ModelConfig: Configuração para modelos de linguagem
+- ModelConfig: Configuration for language models
 
-Estas classes definem a estrutura de dados e configurações necessárias
-para o funcionamento do sistema, independente de implementações específicas.
+These classes define the data structure and configurations necessary
+for the system to function, independent of specific implementations.
 """

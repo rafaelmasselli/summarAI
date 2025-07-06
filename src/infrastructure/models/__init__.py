@@ -1,11 +1,11 @@
 """
-Implementações de Modelos
+Model Implementations
 
-Este módulo contém as implementações concretas dos modelos de linguagem:
+This module contains concrete implementations of language models:
 
 Classes:
-- GeminiModel: Implementação do modelo Gemini do Google
+- GeminiModel: Implementation of Google's Gemini model
 
-Cada classe neste módulo implementa a interface Model do domínio,
-fornecendo integração com APIs específicas de LLMs.
+Each class in this module implements the Model interface from the domain,
+providing integration with specific LLM APIs.
 """

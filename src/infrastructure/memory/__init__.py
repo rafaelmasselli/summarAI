@@ -1,12 +1,12 @@
 """
-Implementações de Memória
+Memory Implementations
 
-Este módulo contém as implementações concretas dos sistemas de memória:
+This module contains concrete implementations of memory systems:
 
 Classes:
-- BufferMemory: Memória que mantém todo o histórico de conversas
-- WindowMemory: Memória que mantém apenas as últimas k conversas
+- BufferMemory: Memory that maintains the entire conversation history
+- WindowMemory: Memory that maintains only the last k conversations
 
-Cada classe neste módulo implementa a interface Memory do domínio,
-fornecendo diferentes estratégias de armazenamento do histórico de conversas.
+Each class in this module implements the Memory interface from the domain,
+providing different strategies for storing conversation history.
 """

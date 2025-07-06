@@ -1,13 +1,13 @@
 """
-Camada de Infraestrutura - Implementações Concretas
+Infrastructure Layer - Concrete Implementations
 
-Esta camada contém as implementações concretas das interfaces definidas na camada de domínio:
+This layer contains concrete implementations of interfaces defined in the domain layer:
 
-Módulos:
-- models: Implementações concretas dos modelos de LLM (ex: Gemini)
-- memory: Implementações de diferentes tipos de memória para os modelos
-- factories: Fábricas para criação de instâncias concretas
+Modules:
+- models: Concrete implementations of LLM models (e.g., Gemini)
+- memory: Implementations of different memory types for models
+- factories: Factories for creating concrete instances
 
-Esta camada lida com detalhes técnicos e integrações com bibliotecas externas como
-LangChain, APIs de LLMs, etc.
+This layer handles technical details and integrations with external libraries such as
+LangChain, LLM APIs, etc.
 """

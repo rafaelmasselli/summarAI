@@ -1,12 +1,12 @@
 """
-Camada de Domínio - Core Business Rules
+Domain Layer - Core Business Rules
 
-Esta camada contém as regras de negócio centrais e interfaces do sistema:
+This layer contains the core business rules and system interfaces:
 
-Módulos:
-- interfaces: Define os contratos (interfaces) que as implementações devem seguir
-- config: Configurações e modelos de dados do domínio
+Modules:
+- interfaces: Defines the contracts (interfaces) that implementations must follow
+- config: Domain configurations and data models
 
-Esta é a camada mais interna da aplicação e não deve depender de nenhuma
-outra camada do sistema.
+This is the innermost layer of the application and should not depend on any
+other system layer.
 """

@@ -1,12 +1,12 @@
 """
-Camada de Aplicação - Casos de Uso
+Application Layer - Use Cases
 
-Esta camada implementa os casos de uso específicos da aplicação:
+This layer implements the specific use cases of the application:
 
-Módulos:
-- handlers: Controladores que coordenam o fluxo de dados e regras de negócio
-- services: Serviços que implementam a lógica de negócio específica
+Modules:
+- handlers: Controllers that coordinate data flow and business rules
+- services: Services that implement specific business logic
 
-Esta camada orquestra o fluxo entre a interface do usuário e as camadas mais
-internas do sistema, implementando a lógica de negócio específica da aplicação.
+This layer orchestrates the flow between the user interface and the inner layers
+of the system, implementing the application-specific business logic.
 """

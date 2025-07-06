@@ -1,12 +1,12 @@
 """
-Handlers da Aplicação
+Application Handlers
 
-Este módulo contém os handlers que coordenam o fluxo da aplicação:
+This module contains the handlers that coordinate the application flow:
 
 Classes:
-- MainHandler: Handler principal que gerencia as operações básicas
-- YouTubeHandler: Handler específico para processamento de vídeos do YouTube
+- MainHandler: Main handler that manages basic operations
+- YouTubeHandler: Specific handler for YouTube video processing
 
-Os handlers são responsáveis por orquestrar o fluxo de dados e regras de
-negócio, coordenando a interação entre diferentes componentes do sistema.
+The handlers are responsible for orchestrating the data flow and business rules,
+coordinating the interaction between different components of the system.
 """
